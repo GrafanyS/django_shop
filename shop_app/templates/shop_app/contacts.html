@@ -4,6 +4,8 @@
 
 {% block main %}
     <h1>Контакты магазина</h1>
+
+
     <div>
         Планируется форма обратной связи
     </div>
@@ -15,17 +17,20 @@
             </address>
 
         </small>
+        <h2><b> Все клиенты: </b></h2>
 
-            <div class="links clearfix">
-				<ul class="links-menu">
-					{% for link in clients %}
-                        <h4>Клиент: {{ link.name }}</h4>
-						<li><a href="{{ link.href }}" class="{% if request.resolver_match.url_name == link.href %}
-						active
-						{% endif %}">{{link.name}}</a> </li>
-					{% endfor %}
-				</ul>
-			</div>
+
+
+        {% for client in clients %}
+
+            <ul>
+                <li><b>Клиент: </b> <br> <hr> {{ client.name | capfirst }}</li>
+                <li>email: <br> {{ client.email }}</li>
+                <li>Телефон: <br> {{ client.phone }}</li>
+                <li>Адрес: <br> {{ client.address }}</li>
+                <li>Дата добавления: <br> {{ client.date }}</li>
+            </ul>
+        {% endfor %}
 
     </div>
 {% endblock %}

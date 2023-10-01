@@ -3,33 +3,17 @@
 {% block title %}Каталог | {{ block.super }}{% endblock %}
 {% block main %}
     <h1>Каталог магазина</h1>
-    <div>отображается {{ catalog|length }} товаров.</div>
-    <h2>Категории:</h2>
-    <ul>
-        {% for id, name in cat_menu %}
-            <li>
-                <a href="{% url 'catalog' id %}">{{ name }}</a>
-            </li>
-        {% endfor %}
-    </ul>
-    {% if topic_name %}
-        <div>Раздел: {{ topic_name }}.</div>
-    {% endif %}
-    <div>
-        <ul>
-            {% for book in books %}
-                <li>
-                    {% if not topic_name %}
-                        {{ book.cat_fk.name }}
-                    {% endif %}
-                    {% if book.author %}
-                        {{ book.author }}
-                    {% endif %}
-                    <a href="{% url 'book' book_id=book.id %}">
-                        {{ book.name }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
+    <div>отображается {{ goods|length }} товаров.</div>
+
+    <div class="links clearfix">
+				<ul class="links-menu">
+					{% for link in goods %}
+                        <h4> Товар:<br> <hr>  {{ link.name }} </h4>
+                        <p>Описание: {{ link.description }}</p>
+						<li><a href="{{ link.href }}" class="{% if request.resolver_match.url_name == link.href %}
+						active
+						{% endif %}">Ссылка: {{link.name}}</a> </li>
+					{% endfor %}
+				</ul>
+			</div>
 {% endblock %}

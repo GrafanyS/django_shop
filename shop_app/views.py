@@ -1,13 +1,16 @@
 import logging
 import datetime
 
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.db.models import Count
+from django.http import HttpRequest, HttpResponse
+from django.shortcuts import render, get_object_or_404, redirect
 
-from shop_app import admin
+# from shop.forms import EditGoodForm
+# from shop_app import admin
 # from django.shortcuts import render
 
 from shop_app.models import Client, Order, Goods
+from shop_app.forms import EditGoodForm
 
 logger = logging.getLogger(__name__)
 
@@ -126,10 +129,11 @@ def get_client_goods(request, client_id: int):
     client = Client.objects.get(id=client_id)
     orders = Order.objects.filter(client_id=client_id, create_at__gte=start)
     context = {
-        'title': 'Тестовая страница',
+        'title': 'шаблон',
         'count_days': COUNT_DAYS,
         'client': client,
-        'orders': orders
+        'orders': orders,
+        'text': 'http://127.0.0.1:8000/get_client_goods'
     }
     logger.info(f'context: {context}')
     return render(request, 'shop_app/client_goods.html', context)
@@ -137,39 +141,31 @@ def get_client_goods(request, client_id: int):
 
 def client_goods(request):
     context = {
-        'title': 'Тестовая страница',
+        'title': 'шаблон',
         'text': 'http://127.0.0.1:8000/get_client_goods'
     }
-    return render(request, 'shop_app/test.html', context=context)
+    logger.info(f'context: {context}')
+    return render(request, 'shop_app/client_goods.html', context)
 
 
 def main(request):
     context = {
         'title': 'Главная страница',
-        'pk': Client.objects.order_by('name')
+        'goods': Goods.objects.order_by('name', 'description')
     }
     logger.info(f'context: {context}')
     return render(request, 'shop_app/index.html', context)
 
 
-def get_catalog(request, pk=None):
-    if pk:
-        book_list = Client.objects.all().filter(cat_fk=pk)
-        topic = Goods.objects.filter(id=pk)
-    else:
-        book_list = Client.objects.all()
-        topic = None
-
-    cat_menu = [(c.id, c.name) for c in Client.objects.order_by('name')]
-    """ Сначала хотел: {c.id: c.name for c in BookCategory.objects.order_by('name')}, Но почему-то не заработало в 
-    шаблоне. {{ cat_menu.m }} где m - ключ словаря cat_menu, возвратило ничего. """
-
-    content = {
-        'books': book_list,
-        'topic_name': topic[0].name if topic else None,
-        'cat_menu': cat_menu
+def get_catalog(request):
+    title = "Каталог"
+    goods = Goods.objects.all()
+    context = {
+        'title': title,
+        'goods': goods,
     }
-    return render(request, 'shop_app/catalog.html', context=content)
+    logger.info(f'context: {context}')
+    return render(request, 'shop_app/catalog.html', context=context)
 
 
 def contacts(request):
@@ -183,5 +179,79 @@ def contacts(request):
     return render(request, 'shop_app/contacts.html', context)
 
 
+def all_clients(request: HttpRequest) -> HttpResponse:
+    clients_with_order_counts = Client.objects.annotate(order_count=Count("orders"))
+    return render(
+        request, "shop_app/index.html", context={"clients": clients_with_order_counts}
+    )
 
 
+def orders_by_client(request: HttpRequest, client_pk: int) -> HttpResponse:
+    title = "orders_by_client"
+    client = get_object_or_404(Client, pk=client_pk)
+    orders = client.orders.all()
+    all_goods_by_client = set()
+    for order in orders:
+        all_goods_by_client.update(order.goods.all())
+    goods = sorted(list(all_goods_by_client), key=lambda good: good.pk, reverse=True)
+    context = {
+        'title': title,
+        "client": client,
+        "orders": orders,
+        "goods": goods,
+    }
+    return render(request, "shop_app/orders_by_client.html", context=context)
+
+
+def order_full(request: HttpRequest, order_pk: int) -> HttpResponse:
+    title = "order_full"
+    order = get_object_or_404(Order, pk=order_pk)
+    goods = order.goods.all()
+    context = {
+        'title': title,
+        "order": order,
+        "goods": goods,
+    }
+    return render(request, "shop_app/order_full.html", context=context)
+
+
+def good_full(request: HttpRequest, good_pk: int) -> HttpResponse:
+    title = "good_full"
+    good = get_object_or_404(Goods, pk=good_pk)
+    context = {
+        'title': title,
+        "good": good,
+    }
+    return render(request, "shop_app/good_full.html", context=context)
+
+
+def edit_good(request: HttpRequest, good_pk: int) -> HttpResponse:
+    title = "форма"
+    good = get_object_or_404(Goods, pk=good_pk)
+    if request.method == "POST":
+        form = EditGoodForm(request.POST, request.FILES)
+        if form.is_valid():
+            good.title = request.POST["title"]
+            good.description = request.POST["description"]
+            good.price = request.POST["price"]
+            good.quantity = request.POST["quantity"]
+            if "image" in request.FILES:
+                good.image = request.FILES["image"]
+            good.save()
+            logger.info(f"Good {good.title} edited")
+            return redirect("good_full", good_pk=good.pk)
+    else:
+        form = EditGoodForm(
+            initial={
+                "title": good.title,
+                "description": good.description,
+                "price": good.price,
+                "quantity": good.quantity,
+            },
+        )
+    context = {
+        'title': title,
+        "form": form,
+        "good": good,
+    }
+    return render(request, "shop_app/edit_good.html", context=context)

@@ -7,6 +7,9 @@
             Тест
         </a></li>
         <li><a href="{% url 'shop_app:client_goods' %}" class="{% if url_name == 'client_goods' %}active{% endif %}">
+            client_goods
+        </a></li>
+        <li><a href="{% url 'shop_app:get_catalog' %}" class="{% if url_name == 'get_catalog' %}active{% endif %}">
             Каталог
         </a></li>
         <li><a href="{% url 'shop_app:contacts' %}" class="{% if url_name == 'contacts' %}active{% endif %}">
