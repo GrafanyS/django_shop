@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ title }} | {{ block.super }}{% endblock %}
+
+{% block main %}
+    <h1>Контакты магазина</h1>
+    <div>
+        Планируется форма обратной связи
+    </div>
+    <div>
+        <small>
+            <address>
+                <a href="mailto:admin@valet.of.by">admin@valet.of.by</a><br>
+                <a href="tel:+372955552368">+375(29) 555-2368</a>
+            </address>
+
+        </small>
+
+            <div class="links clearfix">
+				<ul class="links-menu">
+					{% for link in clients %}
+                        <h4>Клиент: {{ link.name }}</h4>
+						<li><a href="{{ link.href }}" class="{% if request.resolver_match.url_name == link.href %}
+						active
+						{% endif %}">{{link.name}}</a> </li>
+					{% endfor %}
+				</ul>
+			</div>
+
+    </div>
+{% endblock %}

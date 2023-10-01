@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+{% block title %}{{ title }} | {{ block.super }}{% endblock %}
+{% block main %}
+    <h1>Электронный магазин</h1>
+    <div>Список товаров</div>
+    <div>Категории товаров</div>
+    <ul>
+        {% for category in bc %}
+            <li><a href="{% url 'clients' category.id %}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
