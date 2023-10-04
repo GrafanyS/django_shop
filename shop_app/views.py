@@ -189,7 +189,7 @@ def all_clients(request: HttpRequest) -> HttpResponse:
 def orders_by_client(request: HttpRequest, client_pk: int) -> HttpResponse:
     title = "orders_by_client"
     client = get_object_or_404(Client, pk=client_pk)
-    orders = client.orders.all()
+    orders = client.objects.all()
     all_goods_by_client = set()
     for order in orders:
         all_goods_by_client.update(order.goods.all())
