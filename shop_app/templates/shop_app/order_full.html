@@ -1,22 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} {{ title }} | {{ block.super }}{% endblock %}
-
-{% block main %}
-    <h1>Магазин</h1>
-    {% block h1 %}
+{% block title %}Каталог | {{ block.super }}{% endblock %}
+{% block h1 %}
     Заказ <b>{{ order.pk }}</b> от {{ order.date }}:
 {% endblock h1 %}
-
-    <div>{% now "l d M Y" %}</div>
-
+{% block content %}
     {% for good in goods %}
         <ul>
-            <li>Наименование товара:
-                <br> <hr> {{ good.title }}</li>
+            <li>Наименование товара: {{ good.title | capfirst }}</li>
             <li>Описание товара: {{ good.description }}</li>
             <li>Цена: {{ good.price }}</li>
             <li>Дата добавления: {{ good.date }}</li>
         </ul>
     {% endfor %}
-{% endblock %}
+{% endblock content %}
