@@ -4,7 +4,7 @@
 {% block h1 %}
     Все заказы клиента {{ client.name | capfirst }}:
 {% endblock h1 %}
-{% block content %}
+{% block main %}
     <div>
         <ul>
             {% for order in orders %}
@@ -27,4 +27,4 @@
             {% endfor %}
         </ul>
     </div>
-{% endblock content %}
+{% endblock main %}

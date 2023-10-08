@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}{{ title }} | {{ block.super }}{% endblock %}
-
-{% block main %}
+{% block h1 %}
     <h1>Контакты магазина</h1>
-
-
+{% endblock h1 %}
+{% block main %}
     <div>
         Планируется форма обратной связи
     </div>
@@ -24,7 +23,9 @@
         {% for client in clients %}
 
             <ul>
-                <li><b>Клиент: </b> <br> <hr> {{ client.name | capfirst }}</li>
+                <li><b>Клиент: </b> <br>
+                    <hr>
+                    {{ client.name | capfirst }}</li>
                 <li>email: <br> {{ client.email }}</li>
                 <li>Телефон: <br> {{ client.phone }}</li>
                 <li>Адрес: <br> {{ client.address }}</li>

@@ -4,7 +4,7 @@
 {% block h1 %}
     Заказ <b>{{ order.pk }}</b> от {{ order.date }}:
 {% endblock h1 %}
-{% block content %}
+{% block main %}
     {% for good in goods %}
         <ul>
             <li>Наименование товара: {{ good.title | capfirst }}</li>
@@ -13,4 +13,4 @@
             <li>Дата добавления: {{ good.date }}</li>
         </ul>
     {% endfor %}
-{% endblock content %}
+{% endblock main %}

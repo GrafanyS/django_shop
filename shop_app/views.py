@@ -133,19 +133,43 @@ def get_client_goods(request, client_id: int):
         'count_days': COUNT_DAYS,
         'client': client,
         'orders': orders,
-        'text': 'http://127.0.0.1:8000/get_client_goods'
+        'text': f'http://127.0.0.1:8000/get_client_goods/'
     }
     logger.info(f'context: {context}')
     return render(request, 'shop_app/client_goods.html', context)
 
 
 def client_goods(request):
-    context = {
-        'title': 'шаблон',
-        'text': 'http://127.0.0.1:8000/get_client_goods'
-    }
-    logger.info(f'context: {context}')
-    return render(request, 'shop_app/client_goods.html', context)
+    title = 'шаблон'
+    host = request.META["HTTP_HOST"]
+    path = request.path
+    text = f'{host}{path}'
+    if request.method == "POST":
+        client_id = request.POST['number']
+        COUNT_DAYS = 7
+        start = datetime.date.today() - datetime.timedelta(days=COUNT_DAYS)
+        client = Client.objects.get(id=client_id)
+        orders = Order.objects.filter(client_id=client_id, create_at__gte=start)
+        images = Goods.objects.get(image=client_id)
+        url_path = f'{text}{client_id}'
+        context = {
+            'title': title,
+            'count_days': COUNT_DAYS,
+            'client': client,
+            'orders': orders,
+            'url_path': url_path,
+            'images': images,
+            'text': f'{text}'
+        }
+        logger.info(f'context: {context}')
+        return render(request, 'shop_app/client_goods.html', context)
+    else:
+        context = {
+            'title': title,
+            'text': f'{text}'
+        }
+        logger.info(f'context: {context}')
+        return render(request, 'shop_app/client_goods.html', context)
 
 
 def main(request):
@@ -231,22 +255,22 @@ def edit_good(request: HttpRequest, good_pk: int) -> HttpResponse:
     if request.method == "POST":
         form = EditGoodForm(request.POST, request.FILES)
         if form.is_valid():
-            good.title = request.POST["title"]
+            good.name = request.POST["title"]
             good.description = request.POST["description"]
             good.price = request.POST["price"]
-            good.quantity = request.POST["quantity"]
+            good.amount = request.POST["quantity"]
             if "image" in request.FILES:
                 good.image = request.FILES["image"]
             good.save()
-            logger.info(f"Good {good.title} edited")
+            logger.info(f"Good {good.name} edited")
             return redirect("good_full", good_pk=good.pk)
     else:
         form = EditGoodForm(
             initial={
-                "title": good.title,
+                "title": good.name,
                 "description": good.description,
                 "price": good.price,
-                "quantity": good.quantity,
+                "quantity": good.amount,
             },
         )
     context = {
@@ -255,3 +279,36 @@ def edit_good(request: HttpRequest, good_pk: int) -> HttpResponse:
         "good": good,
     }
     return render(request, "shop_app/edit_good.html", context=context)
+
+
+def get_edit_good(request: HttpRequest) -> HttpResponse:
+    title = "форма"
+    good = get_object_or_404(Goods, pk=1)
+    if request.method == "POST":
+        form = EditGoodForm(request.POST, request.FILES)
+        if form.is_valid():
+            good.name = request.POST["title"]
+            good.description = request.POST["description"]
+            good.price = request.POST["price"]
+            good.amount = request.POST["quantity"]
+            if "image" in request.FILES:
+                good.image = request.FILES["image"]
+            good.save()
+            logger.info(f"Good {good.name} edited")
+            return redirect("good_full", good_pk=good.pk)
+    else:
+        form = EditGoodForm(
+            initial={
+                "title": good.name,
+                "description": good.description,
+                "price": good.price,
+                "quantity": good.amount,
+            },
+        )
+    context = {
+        'title': title,
+        "form": form,
+        "good": good,
+    }
+    return render(request, "shop_app/edit_good.html", context=context)
+

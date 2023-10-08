@@ -2,6 +2,9 @@
     <ul>
         <li><a href="{% url 'shop_app:main' %}" class="{% if url_name == 'home' %}active{% endif %}">
             Главная
+        </a>
+        </li><li><a href="{% url 'shop_app:get_edit_good' %}" class="{% if url_name == 'edit' %}active{% endif %}">
+            Форма
         </a></li>
         <li><a href="{% url 'shop_app:test' %}" class="{% if url_name == 'test' %}active{% endif %}">
             Тест

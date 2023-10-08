@@ -2,12 +2,13 @@
 {% load static %}
 {% block title %}Каталог | {{ block.super }}{% endblock %}
 {% block h1 %}
-    Редактирование товара: <b>{{ good.title }}</b>:
+    Редактирование товара: <b>{{ good.name }}</b>:
 {% endblock h1 %}
-{% block content %}
+{% block main %}
+
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Save</button>
     </form>
-{% endblock content %}
+{% endblock main %}

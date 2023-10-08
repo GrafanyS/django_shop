@@ -2,8 +2,10 @@
 {% load static %}
 {#<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>#}
 {% block title %}{{ title }} | {{ block.super }}{% endblock %}
-{% block main %}
+{% block h1 %}
     <h1>Электронный магазин</h1>
+{% endblock h1 %}
+{% block main %}
     <div>Список товаров</div>
     <div>Категории товаров</div>
     <div class="links clearfix">
