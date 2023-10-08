@@ -2,7 +2,7 @@
 # from django.conf import settings
 from django.urls import path
 from shop_app import views
-from .views import all_clients, orders_by_client, order_full, edit_good, good_full
+from .views import all_clients, orders_by_client, order_full, edit_good, good_full, upload_images, upload_images1
 
 app_name = 'shop_app'
 
@@ -30,6 +30,8 @@ urlpatterns = [
     path("client/<int:client_pk>", orders_by_client, name="orders_by_client"),
     path("order/<int:order_pk>", order_full, name="order_full"),
     path("good/<int:good_pk>", good_full, name="good_full"),
+    path('upload_images/', upload_images, name="images"),
+    path('upload_images1/', upload_images1, name="images"),
 
 ]
 

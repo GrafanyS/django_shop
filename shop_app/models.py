@@ -9,6 +9,9 @@ class Client(models.Model):
     address = models.CharField(max_length=254, blank=True)
     create_at = models.DateTimeField(auto_now_add=True)
 
+    def __repr__(self):
+        return 'Client(%s, %s)' % (self.name, self.email)
+
     def __str__(self):
         return f'{self.name}, {self.email}, {self.phone}, {self.address}'
 
@@ -35,6 +38,9 @@ class Goods(models.Model):
             "image": self.image,
         }
 
+    def __repr__(self):
+        return 'Goods(%s, %s)' % (self.name, self.image)
+
     def __str__(self):
         return f'{self.name} {self.description} {self.price} {self.amount} {self.create_at}'
 
@@ -51,5 +57,19 @@ class Order(models.Model):
 
     goods_id = models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='shop_app.Goods')
 
+    def __repr__(self):
+        return 'Order(%s, %s, %s)' % (self.client, self.goods, self.price)
+
     def __str__(self):
         return f'{self.client_id}, {self.goods}, {self.price}, {self.goods_id}'
+
+
+class Image(models.Model):
+    title = models.CharField(max_length=255, blank=False, null=False)
+    image = models.ImageField(upload_to='images/', null=True, max_length=255)
+
+    def __repr__(self):
+        return 'Image(%s, %s)' % (self.title, self.image)
+
+    def __str__(self):
+        return self.title

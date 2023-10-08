@@ -1,5 +1,5 @@
 from django import forms
-from .models import Goods
+from .models import Goods, Image
 
 
 class EditGoodForm(forms.Form):
@@ -14,3 +14,9 @@ class EditGoodForm(forms.Form):
     class Meta:
         model = Goods
         fields = ('title', 'description', 'price', 'quantity', 'image')
+
+
+class ImageForm(forms.ModelForm):
+    class Meta:
+        model = Image
+        fields = ['title', 'image']

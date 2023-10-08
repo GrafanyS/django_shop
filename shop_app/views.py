@@ -2,11 +2,11 @@ import logging
 import datetime
 
 from django.db.models import Count
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 
-from shop_app.models import Client, Order, Goods
-from shop_app.forms import EditGoodForm
+from shop_app.models import Client, Order, Goods, Image
+from shop_app.forms import EditGoodForm, ImageForm
 
 logger = logging.getLogger(__name__)
 
@@ -320,3 +320,21 @@ def get_edit_good(request: HttpRequest) -> HttpResponse:
         "good": good,
     }
     return render(request, "shop_app/edit_good.html", context=context)
+
+
+def upload_images(request):
+    if request.method == 'POST':
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/upload_images")
+    else:
+        form = ImageForm
+
+    return render(request, 'shop_app/images.html', {'form': form})
+
+
+def upload_images1(request):
+    if request.method == 'GET':
+        images = Image.objects.order_by('title')
+        return render(request, "shop_app/images.html", {"images": images})
