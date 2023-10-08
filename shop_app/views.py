@@ -150,7 +150,7 @@ def client_goods(request):
         start = datetime.date.today() - datetime.timedelta(days=COUNT_DAYS)
         client = Client.objects.get(id=client_id)
         orders = Order.objects.filter(client_id=client_id, create_at__gte=start)
-        images = Goods.objects.get(image=client_id)
+        # images = Goods.objects.get(image=client_id)
         url_path = f'{text}{client_id}'
         context = {
             'title': title,
@@ -158,7 +158,7 @@ def client_goods(request):
             'client': client,
             'orders': orders,
             'url_path': url_path,
-            'images': images,
+            # 'images': images,
             'text': f'{text}'
         }
         logger.info(f'context: {context}')
