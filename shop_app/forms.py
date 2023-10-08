@@ -1,4 +1,5 @@
 from django import forms
+from .models import Goods
 
 
 class EditGoodForm(forms.Form):
@@ -9,3 +10,7 @@ class EditGoodForm(forms.Form):
     price = forms.DecimalField(max_digits=10, decimal_places=2)
     quantity = forms.IntegerField(min_value=0)
     image = forms.ImageField(widget=forms.FileInput(attrs={"placeholder": "Image"}))
+
+    class Meta:
+        model = Goods
+        fields = ('title', 'description', 'price', 'quantity', 'image')

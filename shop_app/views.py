@@ -5,10 +5,6 @@ from django.db.models import Count
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 
-# from shop.forms import EditGoodForm
-# from shop_app import admin
-# from django.shortcuts import render
-
 from shop_app.models import Client, Order, Goods
 from shop_app.forms import EditGoodForm
 
@@ -150,7 +146,7 @@ def client_goods(request):
         start = datetime.date.today() - datetime.timedelta(days=COUNT_DAYS)
         client = Client.objects.get(id=client_id)
         orders = Order.objects.filter(client_id=client_id, create_at__gte=start)
-        # images = Goods.objects.get(image=client_id)
+        images = Goods.objects.all()
         url_path = f'{text}{client_id}'
         context = {
             'title': title,
@@ -158,7 +154,7 @@ def client_goods(request):
             'client': client,
             'orders': orders,
             'url_path': url_path,
-            # 'images': images,
+            'images': images,
             'text': f'{text}'
         }
         logger.info(f'context: {context}')
@@ -262,8 +258,21 @@ def edit_good(request: HttpRequest, good_pk: int) -> HttpResponse:
             if "image" in request.FILES:
                 good.image = request.FILES["image"]
             good.save()
+            img_obj = good.image
+            return render(request, 'shop_app/edit_good.html', {'form': form, 'img_obj': img_obj})
+        else:
+            form = EditGoodForm()
+            if form.is_valid():
+                good.name = request.POST["title"]
+                good.description = request.POST["description"]
+                good.price = request.POST["price"]
+                good.amount = request.POST["quantity"]
+                if "image" in request.FILES:
+                    good.image = request.FILES["image"]
+                good.save()
             logger.info(f"Good {good.name} edited")
-            return redirect("good_full", good_pk=good.pk)
+            return render(request, 'shop_app/edit_good.html', {'form': form})
+            # return redirect("good_full", good_pk=good.pk)
     else:
         form = EditGoodForm(
             initial={
@@ -311,4 +320,3 @@ def get_edit_good(request: HttpRequest) -> HttpResponse:
         "good": good,
     }
     return render(request, "shop_app/edit_good.html", context=context)
-

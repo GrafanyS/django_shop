@@ -1,5 +1,5 @@
-from django.conf.urls.static import static
-from django.conf import settings
+# from django.conf.urls.static import static
+# from django.conf import settings
 from django.urls import path
 from shop_app import views
 from .views import all_clients, orders_by_client, order_full, edit_good, good_full
@@ -34,5 +34,5 @@ urlpatterns = [
 ]
 
 # включаем возможность обработки картинок
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

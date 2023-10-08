@@ -55,8 +55,9 @@ class OrderAdmin(admin.ModelAdmin):
         ("goods", "price"),
         "create_at",
         "date_edit_create_at",
+        "goods_id",
     )
-    list_display = ("pk", "client", "price", "create_at", "date_edit_create_at")
+    list_display = ("pk", "client", "price", "create_at", "date_edit_create_at", "goods_id")
     list_display_links = ("create_at", "client")
     list_editable = ("price",)
     readonly_fields = ("create_at", "date_edit_create_at")

@@ -29,7 +29,7 @@
             <p>Товар: {{ order.goods_id.name }}<br>
                 Описание: {{ order.goods_id.description }}<br>
                 Дата создания: {{ order.create_at }}</p>
-            <img src="{{image.url}}"  alt="image"/>
+            <img src="{{ order.images.url}}"  alt="{{ order.goods_id.title }}"/>
         {% endfor %}
     {% else %}
         <p>Клиент пока ничего не заказал</p>
