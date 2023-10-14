@@ -7,7 +7,7 @@ from .views import all_clients, orders_by_client, order_full, edit_good, good_fu
 app_name = 'shop_app'
 
 urlpatterns = [
-    path("", all_clients, name="all_clients"),
+    path('', all_clients, name="all_clients"),
     path('main/', views.main, name='main'),
     path('clients/', views.get_clients, name='clients'),
     path('goods/', views.get_goods, name='goods'),

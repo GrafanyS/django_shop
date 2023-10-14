@@ -200,7 +200,7 @@ def contacts(request):
 
 
 def all_clients(request: HttpRequest) -> HttpResponse:
-    clients_with_order_counts = Client.objects.annotate(order_count=Count("orders"))
+    clients_with_order_counts = Client.objects.annotate(order_count=Count("order"))
     return render(
         request, "shop_app/index.html", context={"clients": clients_with_order_counts}
     )

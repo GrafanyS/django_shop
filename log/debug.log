@@ -14662,3 +14662,70 @@ INFO 2023-10-14 21:26:47,462 autoreload 14108 26220 F:\GIT_DJANGO\Новая п�
 INFO 2023-10-14 21:26:47,928 autoreload 12792 12264 Watching for file changes with StatReloader
 INFO 2023-10-14 21:29:09,253 autoreload 2548 19652 Watching for file changes with StatReloader
 INFO 2023-10-14 21:31:42,052 autoreload 24452 8908 Watching for file changes with StatReloader
+INFO 2023-10-14 21:33:37,612 autoreload 24452 8908 F:\GIT_DJANGO\Новая папка (2)\django_shop\shop_app\urls.py changed, reloading.
+INFO 2023-10-14 21:33:38,080 autoreload 4728 28300 Watching for file changes with StatReloader
+WARNING 2023-10-14 21:33:43,647 log 4728 840 Not Found: /get_client_goods/3
+WARNING 2023-10-14 21:33:43,647 basehttp 4728 840 "GET /get_client_goods/3 HTTP/1.1" 404 16682
+INFO 2023-10-14 21:33:54,436 views 4728 840 context: {'title': 'Главная страница', 'goods': <QuerySet [Goods(123, images/car_EWXu99R.png), Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png)]>}
+INFO 2023-10-14 21:33:54,468 basehttp 4728 840 "GET / HTTP/1.1" 200 17092
+INFO 2023-10-14 21:33:57,250 views 4728 840 context: {'title': 'Главная страница', 'goods': <QuerySet [Goods(123, images/car_EWXu99R.png), Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png)]>}
+INFO 2023-10-14 21:33:57,262 basehttp 4728 840 "GET /main/ HTTP/1.1" 200 17096
+INFO 2023-10-14 21:33:59,842 basehttp 4728 840 "GET /edit/1 HTTP/1.1" 200 13413
+INFO 2023-10-14 21:34:02,132 views 4728 840 context: {'title': 'Тестовая страница', 'pk': <QuerySet [Client(Алевтина Руслановна Петрова, amos_2011@example.com), Client(Амвросий Богданович Белозеров, aleksandra_71@example.net), Client(Анатолий Юлианович Жданов, fadeevaevfrosinija@example.org), Client(Власова Вероника Тарасовна, glafira1985@example.net), Client(Исай Измаилович Ефимов, florentinfedorov@example.net), Client(Кононова Дарья Никифоровна, kuznetsovaanzhela@example.net), Client(Ладислав Глебович Костин, jveselov@example.org), Client(Макар Афанасьевич Мясников, leongusev@example.com), Client(Матвеев Максим Артурович, avde_03@example.com), Client(Модест Афанасьевич Егоров, paramon2019@example.org), Client(Синклитикия Ивановна Устинова, valentina_1971@example.com), Client(Соболева Агафья Архиповна, wpetuhov@example.com), Client(Татьяна Вадимовна Егорова, leontihohlov@example.com), Client(Туров Игорь Эдгарович, andronikmuhin@example.com), Client(Эрнст Гертрудович Савин, aristarh_2009@example.org)]>}
+INFO 2023-10-14 21:34:02,144 basehttp 4728 840 "GET /test/ HTTP/1.1" 200 11648
+INFO 2023-10-14 21:34:04,170 views 4728 840 context: {'title': 'шаблон', 'text': '127.0.0.1:8000/client_goods/'}
+INFO 2023-10-14 21:34:04,179 basehttp 4728 840 "GET /client_goods/ HTTP/1.1" 200 12091
+INFO 2023-10-14 21:34:06,339 views 4728 840 context: {'title': 'Каталог', 'goods': <QuerySet [Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(123, images/car_EWXu99R.png)]>}
+INFO 2023-10-14 21:34:06,354 basehttp 4728 840 "GET /get_catalog/ HTTP/1.1" 200 17674
+INFO 2023-10-14 21:34:08,235 views 4728 840 context: {'title': 'Контакты', 'clients': <QuerySet [Client(Исай Измаилович Ефимов, florentinfedorov@example.net), Client(Алевтина Руслановна Петрова, amos_2011@example.com), Client(Соболева Агафья Архиповна, wpetuhov@example.com), Client(Матвеев Максим Артурович, avde_03@example.com), Client(Эрнст Гертрудович Савин, aristarh_2009@example.org), Client(Татьяна Вадимовна Егорова, leontihohlov@example.com), Client(Синклитикия Ивановна Устинова, valentina_1971@example.com), Client(Ладислав Глебович Костин, jveselov@example.org), Client(Модест Афанасьевич Егоров, paramon2019@example.org), Client(Кононова Дарья Никифоровна, kuznetsovaanzhela@example.net), Client(Амвросий Богданович Белозеров, aleksandra_71@example.net), Client(Туров Игорь Эдгарович, andronikmuhin@example.com), Client(Макар Афанасьевич Мясников, leongusev@example.com), Client(Анатолий Юлианович Жданов, fadeevaevfrosinija@example.org), Client(Власова Вероника Тарасовна, glafira1985@example.net)]>}
+INFO 2023-10-14 21:34:08,250 basehttp 4728 840 "GET /contacts/ HTTP/1.1" 200 19317
+INFO 2023-10-14 21:34:09,707 views 4728 840 context: {'title': 'Главная страница', 'goods': <QuerySet [Goods(123, images/car_EWXu99R.png), Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png)]>}
+INFO 2023-10-14 21:34:09,721 basehttp 4728 840 "GET /main/ HTTP/1.1" 200 17096
+INFO 2023-10-14 21:35:51,170 autoreload 4728 28300 F:\GIT_DJANGO\Новая папка (2)\django_shop\shop_app\urls.py changed, reloading.
+INFO 2023-10-14 21:35:51,673 autoreload 3576 26588 Watching for file changes with StatReloader
+INFO 2023-10-14 21:36:13,360 autoreload 3576 26588 F:\GIT_DJANGO\Новая папка (2)\django_shop\shop_app\urls.py changed, reloading.
+INFO 2023-10-14 21:36:13,839 autoreload 22728 15888 Watching for file changes with StatReloader
+ERROR 2023-10-14 21:36:20,534 log 22728 21444 Internal Server Error: /
+Traceback (most recent call last):
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\Новая папка (2)\django_shop\shop_app\views.py", line 203, in all_clients
+    clients_with_order_counts = Client.objects.annotate(order_count=Count("orders"))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\db\models\query.py", line 1590, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\db\models\query.py", line 1638, in _annotate
+    clone.query.add_annotation(
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\db\models\sql\query.py", line 1133, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\db\models\aggregates.py", line 64, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\db\models\expressions.py", line 943, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\db\models\expressions.py", line 822, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\db\models\sql\query.py", line 1976, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\db\models\sql\query.py", line 1823, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\db\models\sql\query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'orders' into field. Choices are: address, create_at, email, id, name, order, phone
+ERROR 2023-10-14 21:36:20,571 basehttp 22728 21444 "GET / HTTP/1.1" 500 133741
+INFO 2023-10-14 21:36:40,717 autoreload 22728 15888 F:\GIT_DJANGO\Новая папка (2)\django_shop\shop_app\views.py changed, reloading.
+INFO 2023-10-14 21:36:41,210 autoreload 25596 16580 Watching for file changes with StatReloader
+INFO 2023-10-14 21:36:46,715 basehttp 25596 2360 "GET / HTTP/1.1" 200 12142
