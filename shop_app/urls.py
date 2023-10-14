@@ -8,6 +8,7 @@ app_name = 'shop_app'
 
 urlpatterns = [
     path("", all_clients, name="all_clients"),
+    path('main/', views.main, name='main'),
     path('clients/', views.get_clients, name='clients'),
     path('goods/', views.get_goods, name='goods'),
     path('orders/', views.get_orders, name='orders'),

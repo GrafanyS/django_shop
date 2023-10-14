@@ -14652,3 +14652,13 @@ INFO 2023-10-14 10:54:01,925 basehttp 14568 8392 "GET /test/ HTTP/1.1" 200 1792
 INFO 2023-10-14 10:54:03,196 views 14568 8392 context: {'title': 'Главная страница', 'pk': <QuerySet [<Client: Андреев Эрнест Харлампьевич, julija2001@example.org, +73886584182, г. Можга, бул. Володарского, д. 306, 904215>, <Client: Волков Флорентин Викентьевич, nikodim09@example.net, +7 (184) 671-19-83, с. Сухиничи, наб. Московская, д. 2/8, 782502>, <Client: Евпраксия Альбертовна Евсеева, galkinairina@example.net, +7 218 229 4644, к. Серафимович, наб. Димитрова, д. 110 к. 75, 768264>, <Client: Козлова Наталья Павловна, kuzma10@example.org, 8 (064) 565-43-88, г. Троицко-Печорск, наб. Жуковского, д. 30, 116517>, <Client: Ладислав Артурович Гришин, mir_2015@example.com, 8 187 026 45 34, к. Каменномостский, ш. Морозова, д. 78 стр. 5/1, 552008>, <Client: Лукия Ниловна Мельникова, maja_1985@example.org, 8 (509) 734-9254, к. Морозовск, ул. Краснодарская, д. 813 стр. 28, 764012>, <Client: Любовь Святославовна Дорофеева, elizar72@example.org, +78278536656, г. Руза, ш. 50 лет Октября, д. 294, 253855>, <Client: Моисеева Татьяна Эдуардовна, dementevalarisa@example.com, 8 006 080 09 36, д. Самара, пер. Советской Армии, д. 442 стр. 5, 401392>, <Client: Олег Давыдович Сысоев, emiheeva@example.com, 88775930803, к. Рыбинск, ш. 50 лет Октября, д. 3 стр. 78, 721765>, <Client: Тимур Геннадиевич Лапин, wsilin@example.org, +77940135005, ст. Балашиха, наб. 60 лет Октября, д. 7/8, 370269>]>}
 INFO 2023-10-14 10:54:03,197 basehttp 14568 8392 "GET /main/ HTTP/1.1" 200 1702
 INFO 2023-10-14 10:54:11,817 basehttp 14568 8392 "GET /client_goods/ HTTP/1.1" 200 1830
+INFO 2023-10-14 21:25:25,356 autoreload 14472 20348 Watching for file changes with StatReloader
+INFO 2023-10-14 21:26:08,428 autoreload 14472 20348 F:\GIT_DJANGO\Новая папка (2)\django_shop\shop_app\urls.py changed, reloading.
+INFO 2023-10-14 21:26:08,893 autoreload 7540 13036 Watching for file changes with StatReloader
+INFO 2023-10-14 21:26:19,994 autoreload 21232 25644 Watching for file changes with StatReloader
+INFO 2023-10-14 21:26:33,497 autoreload 21232 25644 F:\GIT_DJANGO\Новая папка (2)\django_shop\shop_app\urls.py changed, reloading.
+INFO 2023-10-14 21:26:33,958 autoreload 14108 26220 Watching for file changes with StatReloader
+INFO 2023-10-14 21:26:47,462 autoreload 14108 26220 F:\GIT_DJANGO\Новая папка (2)\django_shop\shop_app\urls.py changed, reloading.
+INFO 2023-10-14 21:26:47,928 autoreload 12792 12264 Watching for file changes with StatReloader
+INFO 2023-10-14 21:29:09,253 autoreload 2548 19652 Watching for file changes with StatReloader
+INFO 2023-10-14 21:31:42,052 autoreload 24452 8908 Watching for file changes with StatReloader
