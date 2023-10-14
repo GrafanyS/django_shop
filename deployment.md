@@ -245,8 +245,7 @@ import os
 import sys
 from dotenv import load_dotenv
 
-project_folder = os.path.expanduser('~/myproject') # adjust as
-appropriate
+project_folder = os.path.expanduser('~/myproject') # adjust as appropriate
 load_dotenv(os.path.join(project_folder, '.env'))
 ## assuming your django settings file is at
 '/home/username/mysite/mysite/settings.py'
@@ -282,9 +281,7 @@ information.
 переменной `project_folder`. Если нет, переходим в нужный каталог и выполняем
 команды добавления “секретов”:
 ```shell
-(virtualenv) 12:01~/myproject (master)$ echo "export
-SECRET_KEY=53397a811810419188d117156a1a1f324bd65cb75fc925f852d8e6
-6f058833cc" >> .env
+(virtualenv) 12:01~/myproject (master)$ echo "export SECRET_KEY=c0b3ffe87698a39c3c1c044e1b5867396357bf94fcf2f98f3a1c05026f26ae51" >> .env
 (virtualenv) 12:01 ~/myproject (master)$ echo "export
 MYSQL_PASSWORD=dbpassword" >> .env
 ```

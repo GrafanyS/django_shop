@@ -14748,3 +14748,319 @@ INFO 2023-10-14 21:38:17,879 basehttp 25596 16312 "GET / HTTP/1.1" 200 11697
 INFO 2023-10-14 21:38:20,751 views 25596 16312 context: {'title': 'Главная страница', 'goods': <QuerySet [Goods(123, images/car_EWXu99R.png), Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png)]>}
 INFO 2023-10-14 21:38:20,771 basehttp 25596 16312 "GET /main/ HTTP/1.1" 200 17096
 INFO 2023-10-14 21:38:22,435 basehttp 25596 16312 "GET /admin/ HTTP/1.1" 200 23340
+INFO 2023-10-15 00:01:17,185 autoreload 24140 28940 Watching for file changes with StatReloader
+ERROR 2023-10-15 00:01:39,247 log 24140 17272 Internal Server Error: /main/
+Traceback (most recent call last):
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\conf\__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2023-10-15 00:01:39,250 basehttp 24140 17272 "GET /main/ HTTP/1.1" 500 145
+INFO 2023-10-15 00:02:21,474 autoreload 24140 28940 F:\GIT_DJANGO\Новая папка (2)\django_shop\django_shop\settings.py changed, reloading.
+INFO 2023-10-15 00:02:21,921 autoreload 17228 2476 Watching for file changes with StatReloader
+INFO 2023-10-15 00:02:31,084 views 17228 21924 context: {'title': 'Главная страница', 'goods': <QuerySet [Goods(123, images/car_EWXu99R.png), Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png)]>}
+INFO 2023-10-15 00:02:31,103 basehttp 17228 21924 "GET /main/ HTTP/1.1" 200 7313
+INFO 2023-10-15 00:02:33,421 views 17228 21924 context: {'title': 'Главная страница', 'goods': <QuerySet [Goods(123, images/car_EWXu99R.png), Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png)]>}
+INFO 2023-10-15 00:02:33,424 basehttp 17228 21924 "GET /main/ HTTP/1.1" 200 7313
+INFO 2023-10-15 00:02:35,434 basehttp 17228 21924 "GET /edit/1 HTTP/1.1" 200 3620
+INFO 2023-10-15 00:02:37,636 views 17228 21924 context: {'title': 'Тестовая страница', 'pk': <QuerySet [Client(Алевтина Руслановна Петрова, amos_2011@example.com), Client(Амвросий Богданович Белозеров, aleksandra_71@example.net), Client(Анатолий Юлианович Жданов, fadeevaevfrosinija@example.org), Client(Власова Вероника Тарасовна, glafira1985@example.net), Client(Исай Измаилович Ефимов, florentinfedorov@example.net), Client(Кононова Дарья Никифоровна, kuznetsovaanzhela@example.net), Client(Ладислав Глебович Костин, jveselov@example.org), Client(Макар Афанасьевич Мясников, leongusev@example.com), Client(Матвеев Максим Артурович, avde_03@example.com), Client(Модест Афанасьевич Егоров, paramon2019@example.org), Client(Синклитикия Ивановна Устинова, valentina_1971@example.com), Client(Соболева Агафья Архиповна, wpetuhov@example.com), Client(Татьяна Вадимовна Егорова, leontihohlov@example.com), Client(Туров Игорь Эдгарович, andronikmuhin@example.com), Client(Эрнст Гертрудович Савин, aristarh_2009@example.org)]>}
+INFO 2023-10-15 00:02:37,638 basehttp 17228 21924 "GET /test/ HTTP/1.1" 200 1868
+INFO 2023-10-15 00:03:08,953 autoreload 17228 2476 F:\GIT_DJANGO\Новая папка (2)\django_shop\django_shop\settings.py changed, reloading.
+INFO 2023-10-15 00:03:09,413 autoreload 304 16796 Watching for file changes with StatReloader
+INFO 2023-10-15 00:05:13,616 autoreload 3868 13296 Watching for file changes with StatReloader
+ERROR 2023-10-15 00:05:21,494 log 3868 5096 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\conf\__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2023-10-15 00:05:21,496 basehttp 3868 5096 "GET /admin/ HTTP/1.1" 500 145
+INFO 2023-10-15 00:05:34,769 autoreload 8668 1556 Watching for file changes with StatReloader
+ERROR 2023-10-15 00:05:56,901 log 8668 20988 Internal Server Error: /main/
+Traceback (most recent call last):
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\conf\__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2023-10-15 00:05:56,904 basehttp 8668 20988 "GET /main/ HTTP/1.1" 500 145
+INFO 2023-10-15 00:06:54,258 autoreload 8668 1556 F:\GIT_DJANGO\Новая папка (2)\django_shop\django_shop\settings.py changed, reloading.
+INFO 2023-10-15 00:06:54,676 autoreload 29200 3208 Watching for file changes with StatReloader
+ERROR 2023-10-15 00:07:03,208 log 29200 27904 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\conf\__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2023-10-15 00:07:03,211 basehttp 29200 27904 "GET /admin/ HTTP/1.1" 500 145
+ERROR 2023-10-15 00:07:09,116 log 29200 27904 Internal Server Error: /edit/1
+Traceback (most recent call last):
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\conf\__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2023-10-15 00:07:09,117 basehttp 29200 27904 "GET /edit/1 HTTP/1.1" 500 145
+ERROR 2023-10-15 00:07:12,591 log 29200 27904 Internal Server Error: /main/
+Traceback (most recent call last):
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\conf\__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2023-10-15 00:07:12,593 basehttp 29200 27904 "GET /main/ HTTP/1.1" 500 145
+INFO 2023-10-15 00:07:25,426 autoreload 29200 3208 F:\GIT_DJANGO\Новая папка (2)\django_shop\django_shop\settings.py changed, reloading.
+INFO 2023-10-15 00:07:25,838 autoreload 29464 18292 Watching for file changes with StatReloader
+ERROR 2023-10-15 00:07:37,606 log 29464 7464 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\conf\__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2023-10-15 00:07:37,609 basehttp 29464 7464 "GET /admin/ HTTP/1.1" 500 145
+ERROR 2023-10-15 00:07:40,973 log 29464 7464 Internal Server Error: /test/
+Traceback (most recent call last):
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\conf\__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2023-10-15 00:07:40,975 basehttp 29464 7464 "GET /test/ HTTP/1.1" 500 145
+INFO 2023-10-15 00:08:12,840 autoreload 29464 18292 F:\GIT_DJANGO\Новая папка (2)\django_shop\django_shop\settings.py changed, reloading.
+INFO 2023-10-15 00:08:13,255 autoreload 24416 21708 Watching for file changes with StatReloader
+INFO 2023-10-15 00:08:15,868 views 24416 28820 context: {'title': 'Главная страница', 'goods': <QuerySet [Goods(123, images/car_EWXu99R.png), Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png)]>}
+INFO 2023-10-15 00:08:15,886 basehttp 24416 28820 "GET /main/ HTTP/1.1" 200 7313
+INFO 2023-10-15 00:08:18,218 views 24416 28820 context: {'title': 'шаблон', 'text': '127.0.0.1:8000/client_goods/'}
+INFO 2023-10-15 00:08:18,221 basehttp 24416 28820 "GET /client_goods/ HTTP/1.1" 200 2284
+INFO 2023-10-15 00:08:20,201 basehttp 24416 28820 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-10-15 00:08:20,262 basehttp 24416 28820 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4267
+INFO 2023-10-15 00:08:43,132 autoreload 24416 21708 F:\GIT_DJANGO\Новая папка (2)\django_shop\django_shop\settings.py changed, reloading.
+INFO 2023-10-15 00:08:43,549 autoreload 29424 24480 Watching for file changes with StatReloader
+INFO 2023-10-15 00:08:48,711 basehttp 29424 13800 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-10-15 00:08:48,753 basehttp 29424 13800 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4267
+INFO 2023-10-15 00:08:54,820 basehttp 29424 13800 "GET /edit/1 HTTP/1.1" 200 3620
+INFO 2023-10-15 00:10:11,178 autoreload 29424 24480 F:\GIT_DJANGO\Новая папка (2)\django_shop\django_shop\settings.py changed, reloading.
+INFO 2023-10-15 00:10:11,646 autoreload 10932 4500 Watching for file changes with StatReloader
+ERROR 2023-10-15 00:10:19,169 log 10932 27048 Internal Server Error: /edit/1
+Traceback (most recent call last):
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 16, in __init__
+    self.storages = [
+                    ^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in <listcomp>
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 77, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "F:\GIT_DJANGO\django_shop\venv\Lib\site-packages\django\conf\__init__.py", line 111, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2023-10-15 00:10:19,172 basehttp 10932 27048 "GET /edit/1 HTTP/1.1" 500 145
+INFO 2023-10-15 00:11:30,121 autoreload 10932 4500 F:\GIT_DJANGO\Новая папка (2)\django_shop\django_shop\settings.py changed, reloading.
+INFO 2023-10-15 00:11:30,550 autoreload 29448 29628 Watching for file changes with StatReloader
+INFO 2023-10-15 00:11:39,012 basehttp 29448 22360 "GET /edit/1 HTTP/1.1" 200 3620
+INFO 2023-10-15 00:11:40,936 views 29448 22360 context: {'title': 'Главная страница', 'goods': <QuerySet [Goods(123, images/car_EWXu99R.png), Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png)]>}
+INFO 2023-10-15 00:11:40,939 basehttp 29448 22360 "GET /main/ HTTP/1.1" 200 7313
+INFO 2023-10-15 00:45:51,307 views 29448 2724 context: {'title': 'Главная страница', 'goods': <QuerySet [Goods(123, images/car_EWXu99R.png), Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png)]>}
+INFO 2023-10-15 00:45:51,309 basehttp 29448 2724 "GET /main/ HTTP/1.1" 200 7313
+WARNING 2023-10-15 00:45:51,340 log 29448 2724 Not Found: /static/css/styles.css
+WARNING 2023-10-15 00:45:51,341 basehttp 29448 2724 "GET /static/css/styles.css HTTP/1.1" 404 179
+INFO 2023-10-15 00:46:11,646 basehttp 29448 2724 "GET /edit/1 HTTP/1.1" 200 3620
+WARNING 2023-10-15 00:46:11,683 log 29448 2724 Not Found: /static/css/styles.css
+WARNING 2023-10-15 00:46:11,683 basehttp 29448 2724 "GET /static/css/styles.css HTTP/1.1" 404 179
+INFO 2023-10-15 00:46:45,797 autoreload 10456 15664 Watching for file changes with StatReloader
