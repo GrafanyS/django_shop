@@ -14729,3 +14729,22 @@ ERROR 2023-10-14 21:36:20,571 basehttp 22728 21444 "GET / HTTP/1.1" 500 133741
 INFO 2023-10-14 21:36:40,717 autoreload 22728 15888 F:\GIT_DJANGO\Новая папка (2)\django_shop\shop_app\views.py changed, reloading.
 INFO 2023-10-14 21:36:41,210 autoreload 25596 16580 Watching for file changes with StatReloader
 INFO 2023-10-14 21:36:46,715 basehttp 25596 2360 "GET / HTTP/1.1" 200 12142
+INFO 2023-10-14 21:38:04,321 basehttp 25596 13364 "GET / HTTP/1.1" 200 11698
+INFO 2023-10-14 21:38:08,510 basehttp 25596 13364 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-10-14 21:38:08,532 basehttp 25596 13364 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 14076
+INFO 2023-10-14 21:38:08,547 basehttp 25596 13364 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2023-10-14 21:38:08,547 basehttp 25596 16312 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2023-10-14 21:38:08,547 basehttp 25596 2612 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2023-10-14 21:38:08,549 basehttp 25596 2612 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2023-10-14 21:38:08,550 basehttp 25596 16312 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2023-10-14 21:38:08,556 basehttp 25596 16312 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2023-10-14 21:38:08,556 basehttp 25596 2612 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2023-10-14 21:38:11,076 basehttp 25596 2612 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2023-10-14 21:38:11,114 basehttp 25596 2612 "GET /admin/ HTTP/1.1" 200 23340
+INFO 2023-10-14 21:38:11,130 basehttp 25596 2612 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2023-10-14 21:38:11,140 basehttp 25596 2612 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2023-10-14 21:38:11,140 basehttp 25596 16312 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2023-10-14 21:38:17,879 basehttp 25596 16312 "GET / HTTP/1.1" 200 11697
+INFO 2023-10-14 21:38:20,751 views 25596 16312 context: {'title': 'Главная страница', 'goods': <QuerySet [Goods(123, images/car_EWXu99R.png), Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png)]>}
+INFO 2023-10-14 21:38:20,771 basehttp 25596 16312 "GET /main/ HTTP/1.1" 200 17096
+INFO 2023-10-14 21:38:22,435 basehttp 25596 16312 "GET /admin/ HTTP/1.1" 200 23340
