@@ -15064,3 +15064,34 @@ INFO 2023-10-15 00:46:11,646 basehttp 29448 2724 "GET /edit/1 HTTP/1.1" 200 3620
 WARNING 2023-10-15 00:46:11,683 log 29448 2724 Not Found: /static/css/styles.css
 WARNING 2023-10-15 00:46:11,683 basehttp 29448 2724 "GET /static/css/styles.css HTTP/1.1" 404 179
 INFO 2023-10-15 00:46:45,797 autoreload 10456 15664 Watching for file changes with StatReloader
+INFO 2023-10-15 00:46:49,971 views 10456 29716 context: {'title': 'Главная страница', 'goods': <QuerySet [Goods(123, images/car_EWXu99R.png), Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png)]>}
+INFO 2023-10-15 00:46:50,016 basehttp 10456 29716 "GET /main/ HTTP/1.1" 200 7313
+WARNING 2023-10-15 00:46:50,090 log 10456 29716 Not Found: /static/css/styles.css
+WARNING 2023-10-15 00:46:50,090 basehttp 10456 29716 "GET /static/css/styles.css HTTP/1.1" 404 179
+INFO 2023-10-15 00:49:01,735 basehttp 10456 17136 code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÊÊ\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+ERROR 2023-10-15 00:49:01,736 basehttp 10456 17136 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2023-10-15 00:49:01,737 basehttp 10456 28556 code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¯í\x9cU')
+ERROR 2023-10-15 00:49:01,737 basehttp 10456 28556 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2023-10-15 00:49:01,740 basehttp 10456 27200 code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03yVÌ\x17\x92óAÎn\x88\\')
+ERROR 2023-10-15 00:49:01,740 basehttp 10456 27200 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2023-10-15 00:49:01,740 basehttp 10456 23116 code 400, message Bad request version ('üP©¸\x9f£\x8c\x1b')
+ERROR 2023-10-15 00:49:01,740 basehttp 10456 23116 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2023-10-15 00:49:01,741 basehttp 10456 2480 code 400, message Bad request version ('w.}jó\x8fPè\x89Ò^R\x92áX4ÆoÍÑ\x82ø')
+INFO 2023-10-15 00:49:01,741 basehttp 10456 13384 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Û\x07=\x8b~b\x91þ%')
+ERROR 2023-10-15 00:49:01,741 basehttp 10456 2480 You're accessing the development server over HTTPS, but it only supports HTTP.
+ERROR 2023-10-15 00:49:01,741 basehttp 10456 13384 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2023-10-15 00:49:10,742 views 10456 29716 context: {'title': 'Главная страница', 'goods': <QuerySet [Goods(123, images/car_EWXu99R.png), Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png)]>}
+INFO 2023-10-15 00:49:10,745 basehttp 10456 29716 "GET /main/ HTTP/1.1" 200 7313
+WARNING 2023-10-15 00:49:10,776 log 10456 29716 Not Found: /static/css/styles.css
+WARNING 2023-10-15 00:49:10,776 basehttp 10456 29716 "GET /static/css/styles.css HTTP/1.1" 404 179
+INFO 2023-10-15 00:49:13,456 views 10456 29716 context: {'title': 'Тестовая страница', 'pk': <QuerySet [Client(Алевтина Руслановна Петрова, amos_2011@example.com), Client(Амвросий Богданович Белозеров, aleksandra_71@example.net), Client(Анатолий Юлианович Жданов, fadeevaevfrosinija@example.org), Client(Власова Вероника Тарасовна, glafira1985@example.net), Client(Исай Измаилович Ефимов, florentinfedorov@example.net), Client(Кононова Дарья Никифоровна, kuznetsovaanzhela@example.net), Client(Ладислав Глебович Костин, jveselov@example.org), Client(Макар Афанасьевич Мясников, leongusev@example.com), Client(Матвеев Максим Артурович, avde_03@example.com), Client(Модест Афанасьевич Егоров, paramon2019@example.org), Client(Синклитикия Ивановна Устинова, valentina_1971@example.com), Client(Соболева Агафья Архиповна, wpetuhov@example.com), Client(Татьяна Вадимовна Егорова, leontihohlov@example.com), Client(Туров Игорь Эдгарович, andronikmuhin@example.com), Client(Эрнст Гертрудович Савин, aristarh_2009@example.org)]>}
+INFO 2023-10-15 00:49:13,465 basehttp 10456 29716 "GET /test/ HTTP/1.1" 200 1868
+WARNING 2023-10-15 00:49:13,502 log 10456 29716 Not Found: /static/css/styles.css
+WARNING 2023-10-15 00:49:13,503 basehttp 10456 29716 "GET /static/css/styles.css HTTP/1.1" 404 179
+INFO 2023-10-15 00:49:43,106 basehttp 10456 29716 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-10-15 00:49:43,197 basehttp 10456 29716 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4267
+INFO 2023-10-15 00:49:46,025 basehttp 10456 29716 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4267
+INFO 2023-10-15 00:49:49,401 views 10456 29716 context: {'title': 'Главная страница', 'goods': <QuerySet [Goods(123, images/car_EWXu99R.png), Goods(Дурацкий неудобно плод., images/Rectangle_30_1.png), Goods(Зачем поймать горький банк грудь., images/Image_c7DfdOv.png), Goods(Какой добиться зима способ ночь ягода., images/car_QJfQHXE.png), Goods(Освобождение бок запустить грудь., images/subsc_photo_Equiapo.png), Goods(Самостоятельно смеяться зачем., images/crown_q8Lb4le.png), Goods(Упорно сверкающий гулять поставить торговля., images/Rectangle_15_1.png)]>}
+INFO 2023-10-15 00:49:49,403 basehttp 10456 29716 "GET /main/ HTTP/1.1" 200 7313
+WARNING 2023-10-15 00:49:49,476 log 10456 29716 Not Found: /static/css/styles.css
+WARNING 2023-10-15 00:49:49,476 basehttp 10456 29716 "GET /static/css/styles.css HTTP/1.1" 404 179
