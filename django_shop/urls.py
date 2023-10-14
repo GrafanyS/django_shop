@@ -16,13 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from shop_app.views import test, main, contacts, client_goods
+# from shop_app.views import test, main, contacts, client_goods
+from django.conf import settings  # new
+from django.conf.urls.static import static  # new
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('shop_app.urls')),
+    # path('', include('shop.urls')),
     # path('test/', test, name='test'),
     # path('main/', main, name='main'),
     # path('client_goods/', client_goods, name='client_goods'),
     # path('contacts/', contacts, name='contacts'),
 ]
+
+if settings.DEBUG:  # new
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

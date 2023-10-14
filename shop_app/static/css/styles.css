@@ -54,11 +54,11 @@ header {
     background-color: lightgoldenrodyellow;
     flex-direction: column;
 }
-.container {
-	width: 1366px;
-	margin: 0 auto;
-	min-height: 100%;
-}
+/*.container {*/
+/*	width: 1366px;*/
+/*	margin: 0 auto;*/
+/*	min-height: 100%;*/
+/*}*/
 
 .main {
     margin: 10px;
