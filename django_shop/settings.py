@@ -19,12 +19,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2!=()+)9_-n#jr5cwg1ysixfdt53&p)%=2!uoeqhdn_1=-5!d^'
+# SECRET_KEY = 'django-insecure-2!=()+)9_-n#jr5cwg1ysixfdt53&p)%=2!uoeqhdn_1=-5!d^'
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.100.11']
+ALLOWED_HOSTS = ['127.0.0.1', 'grafany.pythonanywhere.com',]
 
 INTERNAL_IPS = [
     '127.0.0.1',
@@ -40,12 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shop_app',
-    'debug_toolbar',
+    # 'debug_toolbar',
 
 ]
 
 MIDDLEWARE = [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
