@@ -21,8 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'c0b3ffe87698a39c3c1c044e1b5867396357bf94fcf2f98f3a1c05026f26ae51'
 
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 
 # SECRET_KEY = os.getenv('SECRET_KEY')
 
