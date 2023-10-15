@@ -1,0 +1,3 @@
+*.js linguist-language=Python
+static/* linguist-vendor
+jquery.js linguist-vendor=false
